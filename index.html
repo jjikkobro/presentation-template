@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>장표 레이아웃 레퍼런스</title>
+    <style>
+        :root {
+            --bg: #fafaf9;
+            --fg: #1c1917;
+            --mut: #78716c;
+            --card: #fff;
+            --line: #e7e5e4;
+            --acc: #ea580c
+        }
+
+        @media (prefers-color-scheme:dark) {
+            :root {
+                --bg: #1c1917;
+                --fg: #f5f5f4;
+                --mut: #a8a29e;
+                --card: #292524;
+                --line: #44403c;
+                --acc: #fb923c
+            }
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font: 15px/1.5 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 16px 64px
+        }
+
+        h1 {
+            font-size: 26px;
+            margin: 0 0 4px
+        }
+
+        .sub {
+            color: var(--mut);
+            margin: 0 0 16px
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            padding: 10px 0;
+            z-index: 2;
+            border-bottom: 1px solid var(--line)
+        }
+
+        nav a {
+            font-size: 13px;
+            padding: 4px 10px;
+            border: 1px solid var(--line);
+            border-radius: 99px;
+            color: var(--fg);
+            text-decoration: none
+        }
+
+        h2 {
+            margin: 40px 0 4px;
+            font-size: 20px;
+            color: var(--acc)
+        }
+
+        h3 {
+            margin: 24px 0 2px;
+            font-size: 16px
+        }
+
+        h3 b {
+            color: var(--acc);
+            margin-right: 4px
+        }
+
+        section p {
+            margin: 0 0 10px;
+            color: var(--mut);
+            font-size: 14px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 12px
+        }
+
+        figure {
+            margin: 0;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden
+        }
+
+        figure img {
+            display: block;
+            width: 100%;
+            height: 210px;
+            object-fit: contain;
+            background: #fff
+        }
+
+        figcaption {
+            padding: 8px 10px;
+            font-size: 12.5px
+        }
+
+        figcaption a {
+            color: var(--fg);
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        figcaption span {
+            color: var(--mut)
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>장표 레이아웃 레퍼런스</h1>
+        <p class="sub">SK AX 인사이트 Trend 아티클 이미지를 레이아웃 목적별 41개 유형으로 분류, 유형당 대표 2~3장 · 총 120장. 이미지를 누르면 원본, 제목을 누르면 출처 글이
+            열립니다.</p>
+        <nav><a href="#gA">도입·구조</a><a href="#gB">핵심 메시지 나열</a><a href="#gC">프로세스·흐름</a><a href="#gD">비교·전환</a><a
+                href="#gE">구조·관계 다이어그램</a><a href="#gF">데이터·수치</a><a href="#gG">사례·솔루션 소개</a><a href="#gH">인물·행사·기타</a>
+        </nav>
+        <h2 id="gA">도입·구조</h2>
+        <section>
+            <h3><b>04</b> 개념 정의 (~란?)</h3>
+            <p>제목 + 한 줄 정의 박스 + 핵심 일러스트/흐름</p>
+            <div class="grid">
+                <figure><a href="04_개념_정의_란/04-1_D1611.png" target="_blank"><img loading="lazy"
+                            src="04_개념_정의_란/04-1_D1611.png" alt="개념 정의 (~란?)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2626/" target="_blank" rel="noopener">AI의
+                            새로운 혁신, AI 에이전트(AI Agent)는 도대체 무엇일까?</a><span>2024-06-04 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="04_개념_정의_란/04-2_D1606.png" target="_blank"><img loading="lazy"
+                            src="04_개념_정의_란/04-2_D1606.png" alt="개념 정의 (~란?)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2620/" target="_blank" rel="noopener">다양한
+                            산업에서 활용되는 디지털 트윈(Digital Twin), 어떻게 활용해야 비즈니스 벨류를 높일 수 있을까?</a><span>2024-05-29 ·
+                            1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <h2 id="gB">핵심 메시지 나열</h2>
+        <section>
+            <h3><b>05</b> 핵심 요인·이유 (번호 아이콘 카드)</h3>
+            <p>번호 배지 + 아이콘 + 키워드 + 2줄 설명, 3~4열 카드</p>
+            <div class="grid">
+                <figure><a href="05_핵심_요인_이유_번호_아이콘_카드/05-1_U0681.png" target="_blank"><img loading="lazy"
+                            src="05_핵심_요인_이유_번호_아이콘_카드/05-1_U0681.png" alt="핵심 요인·이유 (번호 아이콘 카드)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3846/" target="_blank"
+                            rel="noopener">프론티어급에 오른 오픈웨이트 모델, 기업 AI 운영의 새로운 판단 기준</a><span>2026-09-03 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="05_핵심_요인_이유_번호_아이콘_카드/05-2_U0961.png" target="_blank"><img loading="lazy"
+                            src="05_핵심_요인_이유_번호_아이콘_카드/05-2_U0961.png" alt="핵심 요인·이유 (번호 아이콘 카드)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3934/" target="_blank" rel="noopener">생성형
+                            AI 다음은 의사결정 AI, Jev가 앞당긴 기업의 AI 판단 위임 설계</a><span>2026-11-23 · 2400×1300</span></figcaption>
+                </figure>
+                <figure><a href="05_핵심_요인_이유_번호_아이콘_카드/05-3_U0953.png" target="_blank"><img loading="lazy"
+                            src="05_핵심_요인_이유_번호_아이콘_카드/05-3_U0953.png" alt="핵심 요인·이유 (번호 아이콘 카드)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3930/" target="_blank" rel="noopener">정상
+                            계정으로 위장한 데이터 유출, 쿼리까지 분석하는 GuardDuty 기반 DB 위협 탐지</a><span>2026-11-20 · 2400×1300</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>06</b> 핵심 요인·이유 (텍스트 카드)</h3>
+            <p>번호 + 컬러 키워드 + 구분선 + 불릿, 3열 카드</p>
+            <div class="grid">
+                <figure><a href="06_핵심_요인_이유_텍스트_카드/06-1_U0308.png" target="_blank"><img loading="lazy"
+                            src="06_핵심_요인_이유_텍스트_카드/06-1_U0308.png" alt="핵심 요인·이유 (텍스트 카드)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3722/" target="_blank"
+                            rel="noopener">Multi-Agent 시대, AIOps 없이 IT 운영이 멈추는 이유</a><span>2026-05-07 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="06_핵심_요인_이유_텍스트_카드/06-2_U0218.png" target="_blank"><img loading="lazy"
+                            src="06_핵심_요인_이유_텍스트_카드/06-2_U0218.png" alt="핵심 요인·이유 (텍스트 카드)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3692/" target="_blank"
+                            rel="noopener">K-Taxonomy 대응, 진짜 문제는 IT 인프라에 있다</a><span>2026-03-31 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="06_핵심_요인_이유_텍스트_카드/06-3_U0392.png" target="_blank"><img loading="lazy"
+                            src="06_핵심_요인_이유_텍스트_카드/06-3_U0392.png" alt="핵심 요인·이유 (텍스트 카드)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3748/" target="_blank" rel="noopener">‘AI
+                            네이티브’의 등장, AI를 쓰는 기업에서 AI로 만들어진 기업으로</a><span>2026-05-27 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>07</b> 이점·효과 (원형 아이콘)</h3>
+            <p>원형 아이콘 3~4개 + 하단 캡션, 여백 많은 구성</p>
+            <div class="grid">
+                <figure><a href="07_이점_효과_원형_아이콘/07-1_D1508.png" target="_blank"><img loading="lazy"
+                            src="07_이점_효과_원형_아이콘/07-1_D1508.png" alt="이점·효과 (원형 아이콘)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2560/" target="_blank" rel="noopener">디지털
+                            혁신 시대, 진정한 디지털 팩토리는 어떻게 구현해야 할까?</a><span>2024-04-25 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="07_이점_효과_원형_아이콘/07-2_D1176.png" target="_blank"><img loading="lazy"
+                            src="07_이점_효과_원형_아이콘/07-2_D1176.png" alt="이점·효과 (원형 아이콘)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2334/" target="_blank" rel="noopener">성공적인
+                            생성형 AI 운영을 위해 꼭 알아야 할 클라우드 도입 전략</a><span>2023-12-04 · 1200×900</span></figcaption>
+                </figure>
+                <figure><a href="07_이점_효과_원형_아이콘/07-3_D1612.png" target="_blank"><img loading="lazy"
+                            src="07_이점_효과_원형_아이콘/07-3_D1612.png" alt="이점·효과 (원형 아이콘)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2626/" target="_blank" rel="noopener">AI의
+                            새로운 혁신, AI 에이전트(AI Agent)는 도대체 무엇일까?</a><span>2024-06-04 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>08</b> 항목별 설명 (좌측 라벨 박스)</h3>
+            <p>좌측 컬러 라벨 + 우측 설명 박스가 세로로 반복</p>
+            <div class="grid">
+                <figure><a href="08_항목별_설명_좌측_라벨_박스/08-1_D1199.png" target="_blank"><img loading="lazy"
+                            src="08_항목별_설명_좌측_라벨_박스/08-1_D1199.png" alt="항목별 설명 (좌측 라벨 박스)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2354/" target="_blank" rel="noopener">탄소
+                            배출 규제, 디지털 전환에서 해답을 찾다! Digital ESG 사례</a><span>2023-12-16 · 1200×900</span></figcaption>
+                </figure>
+                <figure><a href="08_항목별_설명_좌측_라벨_박스/08-2_U1100.png" target="_blank"><img loading="lazy"
+                            src="08_항목별_설명_좌측_라벨_박스/08-2_U1100.png" alt="항목별 설명 (좌측 라벨 박스)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3036/" target="_blank"
+                            rel="noopener">여행/관광 산업의 초개인화 마케팅의 도입, 고객 경험 혁신의 시작입니다</a><span>2024-11-25 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="08_항목별_설명_좌측_라벨_박스/08-3_D1535.png" target="_blank"><img loading="lazy"
+                            src="08_항목별_설명_좌측_라벨_박스/08-3_D1535.png" alt="항목별 설명 (좌측 라벨 박스)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2588/" target="_blank" rel="noopener">기계
+                            고객(Machine Customer)을 위해 기업이 준비할 수 있는 비즈니스 전략</a><span>2024-05-20 · 1200×650</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>09</b> 번호 리스트 (요약 목록)</h3>
+            <p>가운데 정렬 라운드 박스에 번호 목록</p>
+            <div class="grid">
+                <figure><a href="09_번호_리스트_요약_목록/09-1_D1507.png" target="_blank"><img loading="lazy"
+                            src="09_번호_리스트_요약_목록/09-1_D1507.png" alt="번호 리스트 (요약 목록)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2560/" target="_blank" rel="noopener">디지털
+                            혁신 시대, 진정한 디지털 팩토리는 어떻게 구현해야 할까?</a><span>2024-04-25 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="09_번호_리스트_요약_목록/09-2_U1143.png" target="_blank"><img loading="lazy"
+                            src="09_번호_리스트_요약_목록/09-2_U1143.png" alt="번호 리스트 (요약 목록)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3066/" target="_blank" rel="noopener">MS
+                            행사, AI 세미나를 통해 알아보는 효과적인 엔터프라이즈 AI 활용 방법</a><span>2024-12-17 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="09_번호_리스트_요약_목록/09-3_D1000.png" target="_blank"><img loading="lazy"
+                            src="09_번호_리스트_요약_목록/09-3_D1000.png" alt="번호 리스트 (요약 목록)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/138/" target="_blank" rel="noopener">생성형
+                            AI부터 디지털 트윈까지, 성공적인 DT를 위해 알아야 할 4가지 IT 트렌드와 DT 키워드</a><span>2023-08-07 · 1200×900</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <h2 id="gC">프로세스·흐름</h2>
+        <section>
+            <h3><b>10</b> 단계 프로세스 (카드 + 화살표)</h3>
+            <p>STEP 번호 + 아이콘 카드 사이 화살표</p>
+            <div class="grid">
+                <figure><a href="10_단계_프로세스_카드_화살표/10-1_U0129.png" target="_blank"><img loading="lazy"
+                            src="10_단계_프로세스_카드_화살표/10-1_U0129.png" alt="단계 프로세스 (카드 + 화살표)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3660/" target="_blank" rel="noopener">제조
+                            현장의 데이터를 AI로 연결하다: AWS Industrial Data Fabric + SK AX Data to AI Service
+                            Architecting</a><span>2026-02-27 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="10_단계_프로세스_카드_화살표/10-2_U0402.png" target="_blank"><img loading="lazy"
+                            src="10_단계_프로세스_카드_화살표/10-2_U0402.png" alt="단계 프로세스 (카드 + 화살표)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3754/" target="_blank"
+                            rel="noopener">2026년 VMware 갱신 전에 반드시 확인해야 할 비용과 전환 전략</a><span>2026-06-05 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="10_단계_프로세스_카드_화살표/10-3_U0778.png" target="_blank"><img loading="lazy"
+                            src="10_단계_프로세스_카드_화살표/10-3_U0778.png" alt="단계 프로세스 (카드 + 화살표)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3876/" target="_blank" rel="noopener">AI가
+                            멈춰도 업무는 이어져야 한다, 기업에 AI Continuity가 필수가 된 이유</a><span>2026-10-12 · 2400×1300</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>11</b> 흐름·로드맵 (쉐브론)</h3>
+            <p>가로 쉐브론 화살표 + 하단 설명 바</p>
+            <div class="grid">
+                <figure><a href="11_흐름_로드맵_쉐브론/11-1_D1628.png" target="_blank"><img loading="lazy"
+                            src="11_흐름_로드맵_쉐브론/11-1_D1628.png" alt="흐름·로드맵 (쉐브론)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2640/" target="_blank"
+                            rel="noopener">비즈니스의 미래를 여는 열쇠, AI 혁신을 실현하는 SK㈜ C&amp;C의 AI 솔루션 Solur(솔루어) 총
+                            정리</a><span>2024-06-13 · 1200×380</span></figcaption>
+                </figure>
+                <figure><a href="11_흐름_로드맵_쉐브론/11-2_U0149.png" target="_blank"><img loading="lazy"
+                            src="11_흐름_로드맵_쉐브론/11-2_U0149.png" alt="흐름·로드맵 (쉐브론)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3670/" target="_blank"
+                            rel="noopener">Catena-X Dataspace 기반 DPP 대응 전략: EU 디지털 제품 여권 시대, 제조기업의 실행
+                            해법</a><span>2026-03-11 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="11_흐름_로드맵_쉐브론/11-3_U0987.png" target="_blank"><img loading="lazy"
+                            src="11_흐름_로드맵_쉐브론/11-3_U0987.png" alt="흐름·로드맵 (쉐브론)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2996/" target="_blank"
+                            rel="noopener">QMS(Quality Management System, 품질 관리 시스템)를 활용한 제조 공정 품질
+                            향상</a><span>2024-11-06 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>12</b> 진화 단계·패러다임 변화</h3>
+            <p>단계별 컬럼/화살표 2행으로 변화 방향 표시</p>
+            <div class="grid">
+                <figure><a href="12_진화_단계_패러다임_변화/12-1_U0390.png" target="_blank"><img loading="lazy"
+                            src="12_진화_단계_패러다임_변화/12-1_U0390.png" alt="진화 단계·패러다임 변화"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3748/" target="_blank" rel="noopener">‘AI
+                            네이티브’의 등장, AI를 쓰는 기업에서 AI로 만들어진 기업으로</a><span>2026-05-27 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="12_진화_단계_패러다임_변화/12-2_D1358.png" target="_blank"><img loading="lazy"
+                            src="12_진화_단계_패러다임_변화/12-2_D1358.png" alt="진화 단계·패러다임 변화"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2494/" target="_blank"
+                            rel="noopener">제조산업이 디지털 전환을 선택할 수밖에 없었던 이유는?</a><span>2024-03-20 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="12_진화_단계_패러다임_변화/12-3_D1277.png" target="_blank"><img loading="lazy"
+                            src="12_진화_단계_패러다임_변화/12-3_D1277.png" alt="진화 단계·패러다임 변화"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2482/" target="_blank"
+                            rel="noopener">유통업계의 디지털 전환, 초개인화 전략의 핵심</a><span>2024-03-15 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>13</b> 순환·루프</h3>
+            <p>무한루프·원형 순환 화살표로 반복 구조 표현</p>
+            <div class="grid">
+                <figure><a href="13_순환_루프/13-1_U0671.png" target="_blank"><img loading="lazy"
+                            src="13_순환_루프/13-1_U0671.png" alt="순환·루프"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3840/" target="_blank" rel="noopener">루프
+                            엔지니어링: 하네스를 넘어 AI가 스스로 반복하며 일하는 구조</a><span>2026-08-28 · 1200×570</span></figcaption>
+                </figure>
+                <figure><a href="13_순환_루프/13-2_U1713.png" target="_blank"><img loading="lazy"
+                            src="13_순환_루프/13-2_U1713.png" alt="순환·루프"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3616/" target="_blank" rel="noopener">AI
+                            시대 개발 환경의 변화, 2026년을 대비하기 위한 역량은?</a><span>2025-12-29 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="13_순환_루프/13-3_U1692.png" target="_blank"><img loading="lazy"
+                            src="13_순환_루프/13-3_U1692.png" alt="순환·루프"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3604/" target="_blank" rel="noopener">검색
+                            없는 쇼핑의 시대, GEO가 바꾸는 유통 기업의 생존 전략</a><span>2025-12-22 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>14</b> 수식형 결합 (A + B = C)</h3>
+            <p>카드 사이 +, = 기호로 구성요소 결합</p>
+            <div class="grid">
+                <figure><a href="14_수식형_결합_A_B_C/14-1_U0786.png" target="_blank"><img loading="lazy"
+                            src="14_수식형_결합_A_B_C/14-1_U0786.png" alt="수식형 결합 (A + B = C)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3880/" target="_blank" rel="noopener">컴퓨터를
+                            직접 조작하는 AI 에이전트 시대의 도입 전략과 기업의 AI Readiness</a><span>2026-10-14 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="14_수식형_결합_A_B_C/14-2_U0779.png" target="_blank"><img loading="lazy"
+                            src="14_수식형_결합_A_B_C/14-2_U0779.png" alt="수식형 결합 (A + B = C)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3876/" target="_blank" rel="noopener">AI가
+                            멈춰도 업무는 이어져야 한다, 기업에 AI Continuity가 필수가 된 이유</a><span>2026-10-12 · 2400×1300</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="14_수식형_결합_A_B_C/14-3_D1743.png" target="_blank"><img loading="lazy"
+                            src="14_수식형_결합_A_B_C/14-3_D1743.png" alt="수식형 결합 (A + B = C)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2690/" target="_blank"
+                            rel="noopener">“효율적인 클라우드 시스템 활용을 원한다면 이것을 꼭 명심하세요” Cloud Platform그룹 이지선 그룹장
+                            인터뷰</a><span>2024-07-02 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <h2 id="gD">비교·전환</h2>
+        <section>
+            <h3><b>15</b> 비교 (A vs B 2단)</h3>
+            <p>좌(회색)·우(오렌지) 2단 패널, 동일 항목 대비</p>
+            <div class="grid">
+                <figure><a href="15_비교_A_vs_B_2단/15-1_U0013.png" target="_blank"><img loading="lazy"
+                            src="15_비교_A_vs_B_2단/15-1_U0013.png" alt="비교 (A vs B 2단)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3624/" target="_blank" rel="noopener">2026
+                            에이전트 AI 트렌드: 생성형 AI 이후, 에이전틱 AI가 기업 업무를 바꾸는 방식</a><span>2026-01-14 · 1201×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="15_비교_A_vs_B_2단/15-2_U0391.png" target="_blank"><img loading="lazy"
+                            src="15_비교_A_vs_B_2단/15-2_U0391.png" alt="비교 (A vs B 2단)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3748/" target="_blank" rel="noopener">‘AI
+                            네이티브’의 등장, AI를 쓰는 기업에서 AI로 만들어진 기업으로</a><span>2026-05-27 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="15_비교_A_vs_B_2단/15-3_D0875.png" target="_blank"><img loading="lazy"
+                            src="15_비교_A_vs_B_2단/15-3_D0875.png" alt="비교 (A vs B 2단)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/100/" target="_blank" rel="noopener">중소기업도
+                            부담 없이 스마트 팩토리를 도입하는 방법! I-FACTs Hub 담당자 인터뷰</a><span>2023-05-18 · 1200×900</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>16</b> 전환 (과제 → 해결)</h3>
+            <p>좌측 문제 리스트 → 화살표 → 우측 해결/효과</p>
+            <div class="grid">
+                <figure><a href="16_전환_과제_해결/16-1_U0128.png" target="_blank"><img loading="lazy"
+                            src="16_전환_과제_해결/16-1_U0128.png" alt="전환 (과제 → 해결)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3660/" target="_blank" rel="noopener">제조
+                            현장의 데이터를 AI로 연결하다: AWS Industrial Data Fabric + SK AX Data to AI Service
+                            Architecting</a><span>2026-02-27 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="16_전환_과제_해결/16-2_U0055.png" target="_blank"><img loading="lazy"
+                            src="16_전환_과제_해결/16-2_U0055.png" alt="전환 (과제 → 해결)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3638/" target="_blank" rel="noopener">제조
+                            산업을 위한 Vertical AI 전략: SK AX 에이전틱 AI 포트폴리오</a><span>2026-01-30 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="16_전환_과제_해결/16-3_D0767.png" target="_blank"><img loading="lazy"
+                            src="16_전환_과제_해결/16-3_D0767.png" alt="전환 (과제 → 해결)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/46/" target="_blank" rel="noopener">디지털
+                            혁신을 위해 기업들이 도입하고 있는 이것, 애자일 조직이란?(feat. 조건, 성공 사례)</a><span>2023-03-27 · 1200×900</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>17</b> 비교표 (테이블)</h3>
+            <p>헤더 컬러 행 + 항목별 행 비교 표</p>
+            <div class="grid">
+                <figure><a href="17_비교표_테이블/17-1_D1751.png" target="_blank"><img loading="lazy"
+                            src="17_비교표_테이블/17-1_D1751.png" alt="비교표 (테이블)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2696/" target="_blank" rel="noopener">데이터
+                            레이크? 웨어하우스? 마트? 중요해지는 빅데이터 관리, 제대로 알고 보기</a><span>2024-07-08 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="17_비교표_테이블/17-2_U1691.png" target="_blank"><img loading="lazy"
+                            src="17_비교표_테이블/17-2_U1691.png" alt="비교표 (테이블)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3604/" target="_blank" rel="noopener">검색
+                            없는 쇼핑의 시대, GEO가 바꾸는 유통 기업의 생존 전략</a><span>2025-12-22 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="17_비교표_테이블/17-3_D1229.png" target="_blank"><img loading="lazy"
+                            src="17_비교표_테이블/17-3_D1229.png" alt="비교표 (테이블)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2406/" target="_blank" rel="noopener">보고서
+                            똑똑하게 쓰는 방법! 생성형AI 기반 보고서 자동생성 솔루션 tok.ai</a><span>2024-02-05 · 1200×900</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <h2 id="gE">구조·관계 다이어그램</h2>
+        <section>
+            <h3><b>18</b> 허브·방사형</h3>
+            <p>중앙 원 + 주변 요소가 방사형으로 배치</p>
+            <div class="grid">
+                <figure><a href="18_허브_방사형/18-1_U0069.png" target="_blank"><img loading="lazy"
+                            src="18_허브_방사형/18-1_U0069.png" alt="허브·방사형"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3644/" target="_blank"
+                            rel="noopener">R&amp;D 혁신의 새로운 동력, AI: 신소재 개발부터 제품 설계까지, AI가 바꾸는 연구개발의
+                            미래</a><span>2026-02-19 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="18_허브_방사형/18-3_D1010.png" target="_blank"><img loading="lazy"
+                            src="18_허브_방사형/18-3_D1010.png" alt="허브·방사형"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/146/" target="_blank" rel="noopener">좋은
+                            생성형 AI를 만들려면 좋은 데이터가 필요하다! 품질 좋은 데이터를 확보하는 방법</a><span>2023-08-16 · 1200×900</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>19</b> 원형 분할 (4분할 도넛)</h3>
+            <p>원을 사분면으로 나누고 바깥에 설명 배치</p>
+            <div class="grid">
+                <figure><a href="19_원형_분할_4분할_도넛/19-1_U0019.png" target="_blank"><img loading="lazy"
+                            src="19_원형_분할_4분할_도넛/19-1_U0019.png" alt="원형 분할 (4분할 도넛)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3626/" target="_blank"
+                            rel="noopener">2026년 기업 AI 전환의 해답, 멀티에이전트 시스템이 필요한 이유</a><span>2026-01-16 · 1201×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="19_원형_분할_4분할_도넛/19-2_U1531.png" target="_blank"><img loading="lazy"
+                            src="19_원형_분할_4분할_도넛/19-2_U1531.png" alt="원형 분할 (4분할 도넛)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3546/" target="_blank" rel="noopener">클라우드
+                            기반 AX 전환: 제조 현장의 리듬을 바꾸다</a><span>2025-11-13 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="19_원형_분할_4분할_도넛/19-3_U1106.png" target="_blank"><img loading="lazy"
+                            src="19_원형_분할_4분할_도넛/19-3_U1106.png" alt="원형 분할 (4분할 도넛)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3040/" target="_blank" rel="noopener">SK
+                            AI SUMMIT 2024 행사 리뷰, AI 기반의 채용과 Market Intelligence를 파헤치다</a><span>2024-11-26 ·
+                            1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>20</b> 관계형 원 (벤·삼각)</h3>
+            <p>교집합/삼각 배치 원으로 구성요소 관계 표현</p>
+            <div class="grid">
+                <figure><a href="20_관계형_원_벤_삼각/20-1_U0213.png" target="_blank"><img loading="lazy"
+                            src="20_관계형_원_벤_삼각/20-1_U0213.png" alt="관계형 원 (벤·삼각)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3690/" target="_blank" rel="noopener">산업안전
+                            SHE 플랫폼으로 혁신하는 AI 시대 예방적 안전 경영</a><span>2026-03-27 · 1200×1200</span></figcaption>
+                </figure>
+                <figure><a href="20_관계형_원_벤_삼각/20-2_D0906.png" target="_blank"><img loading="lazy"
+                            src="20_관계형_원_벤_삼각/20-2_D0906.png" alt="관계형 원 (벤·삼각)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/108/" target="_blank" rel="noopener">ESG
+                            경영의 최신 트렌드가 한 자리에! 2023 기후산업국제박람회 후기 | DT 체크인</a><span>2023-06-01 · 1200×900</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="20_관계형_원_벤_삼각/20-3_D1239.png" target="_blank"><img loading="lazy"
+                            src="20_관계형_원_벤_삼각/20-3_D1239.png" alt="관계형 원 (벤·삼각)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2414/" target="_blank" rel="noopener">헷갈리고
+                            어려운 생성형 AI를 이해하기 위한 용어 모음집</a><span>2024-02-13 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>21</b> 피라미드</h3>
+            <p>계층 피라미드 + 우측 설명</p>
+            <div class="grid">
+                <figure><a href="21_피라미드/21-1_U0009.png" target="_blank"><img loading="lazy"
+                            src="21_피라미드/21-1_U0009.png" alt="피라미드"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2770/" target="_blank" rel="noopener">생성형
+                            AI가 혁신하는 자율 시스템과 산업별 사례</a><span>2024-08-16 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="21_피라미드/21-2_D1012.png" target="_blank"><img loading="lazy"
+                            src="21_피라미드/21-2_D1012.png" alt="피라미드"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/146/" target="_blank" rel="noopener">좋은
+                            생성형 AI를 만들려면 좋은 데이터가 필요하다! 품질 좋은 데이터를 확보하는 방법</a><span>2023-08-16 · 1200×900</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>22</b> 레이어 아키텍처</h3>
+            <p>층(Layer) 단위 가로 박스 적층 구조</p>
+            <div class="grid">
+                <figure><a href="22_레이어_아키텍처/22-1_U0229.png" target="_blank"><img loading="lazy"
+                            src="22_레이어_아키텍처/22-1_U0229.png" alt="레이어 아키텍처"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3698/" target="_blank"
+                            rel="noopener">Multi-Agent가 S&amp;OP를 바꾼다: Agentic SCM 아키텍처 완전 해설</a><span>2026-04-17 ·
+                            1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>23</b> 시스템 구성도</h3>
+            <p>블록·연결선으로 시스템/아키텍처 표현</p>
+            <div class="grid">
+                <figure><a href="23_시스템_구성도/23-1_D1740.png" target="_blank"><img loading="lazy"
+                            src="23_시스템_구성도/23-1_D1740.png" alt="시스템 구성도"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2686/" target="_blank" rel="noopener">디지털
+                            전환으로 유통 산업의 경쟁력을 높이는 방법</a><span>2024-06-28 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>24</b> 매트릭스·2x2 그리드</h3>
+            <p>사분면 좌표 또는 2x2 카드로 기준·영역 구분</p>
+            <div class="grid">
+                <figure><a href="24_매트릭스_2x2_그리드/24-1_D0981.png" target="_blank"><img loading="lazy"
+                            src="24_매트릭스_2x2_그리드/24-1_D0981.png" alt="매트릭스·2x2 그리드"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/132/" target="_blank" rel="noopener">ESG
+                            경영이 필수인 시대, Digital SHE를 주목하세요 | 같이 읽는 IT 트렌드</a><span>2023-07-25 · 1200×900</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="24_매트릭스_2x2_그리드/24-2_U0219.png" target="_blank"><img loading="lazy"
+                            src="24_매트릭스_2x2_그리드/24-2_U0219.png" alt="매트릭스·2x2 그리드"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3692/" target="_blank"
+                            rel="noopener">K-Taxonomy 대응, 진짜 문제는 IT 인프라에 있다</a><span>2026-03-31 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="24_매트릭스_2x2_그리드/24-3_U0130.png" target="_blank"><img loading="lazy"
+                            src="24_매트릭스_2x2_그리드/24-3_U0130.png" alt="매트릭스·2x2 그리드"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3660/" target="_blank" rel="noopener">제조
+                            현장의 데이터를 AI로 연결하다: AWS Industrial Data Fabric + SK AX Data to AI Service
+                            Architecting</a><span>2026-02-27 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>25</b> 트리·분해</h3>
+            <p>상위→하위로 갈라지는 트리/분해 구조</p>
+            <div class="grid">
+                <figure><a href="25_트리_분해/25-1_U1712.png" target="_blank"><img loading="lazy"
+                            src="25_트리_분해/25-1_U1712.png" alt="트리·분해"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3616/" target="_blank" rel="noopener">AI
+                            시대 개발 환경의 변화, 2026년을 대비하기 위한 역량은?</a><span>2025-12-29 · 1200×650</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <h2 id="gF">데이터·수치</h2>
+        <section>
+            <h3><b>26</b> KPI·수치 강조</h3>
+            <p>큰 숫자 + 증감 화살표/게이지 카드</p>
+            <div class="grid">
+                <figure><a href="26_KPI_수치_강조/26-1_U0134.png" target="_blank"><img loading="lazy"
+                            src="26_KPI_수치_강조/26-1_U0134.png" alt="KPI·수치 강조"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3662/" target="_blank" rel="noopener">SK
+                            AX의 물성예측 AI를 통한 반도체·배터리 신소재 개발 경쟁력 확보 사례</a><span>2026-03-04 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="26_KPI_수치_강조/26-2_U0866.png" target="_blank"><img loading="lazy"
+                            src="26_KPI_수치_강조/26-2_U0866.png" alt="KPI·수치 강조"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3904/" target="_blank" rel="noopener">2026
+                            AI 톺아보기, 에이전틱 AI 확산의 해에 드러난 기업 AI 성과의 과제</a><span>2026-10-23 · 2400×1300</span></figcaption>
+                </figure>
+                <figure><a href="26_KPI_수치_강조/26-3_D1511.png" target="_blank"><img loading="lazy"
+                            src="26_KPI_수치_강조/26-3_D1511.png" alt="KPI·수치 강조"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2562/" target="_blank" rel="noopener">생성형
+                            AI 도입 성공의 핵심요소와 적용사례</a><span>2024-04-26 · 867×374</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>27</b> 막대 차트</h3>
+            <p>강조 막대만 오렌지, 나머지 연한 톤</p>
+            <div class="grid">
+                <figure><a href="27_막대_차트/27-1_D0994.png" target="_blank"><img loading="lazy"
+                            src="27_막대_차트/27-1_D0994.png" alt="막대 차트"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/136/" target="_blank" rel="noopener">생성형
+                            AI 시대, 비즈니스 효율을 위해 주목해야 할 로우코드(Low code)란?</a><span>2023-08-01 · 1200×900</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="27_막대_차트/27-2_D1207.png" target="_blank"><img loading="lazy"
+                            src="27_막대_차트/27-2_D1207.png" alt="막대 차트"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2382/" target="_blank" rel="noopener">생성형
+                            AI 도입 전, 반드시 알아야 할 LLM 관련 이슈 4가지</a><span>2024-01-09 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="27_막대_차트/27-3_U0879.png" target="_blank"><img loading="lazy"
+                            src="27_막대_차트/27-3_U0879.png" alt="막대 차트"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3910/" target="_blank" rel="noopener">에이전트
+                            하네스가 가른 AI 성과 격차, 모델보다 중요한 기업의 운영 체계화</a><span>2026-11-11 · 2400×1300</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>28</b> 도넛·파이 차트</h3>
+            <p>강조 조각 오렌지 + 범례</p>
+            <div class="grid">
+                <figure><a href="28_도넛_파이_차트/28-1_D1256.png" target="_blank"><img loading="lazy"
+                            src="28_도넛_파이_차트/28-1_D1256.png" alt="도넛·파이 차트"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2440/" target="_blank" rel="noopener">생성형
+                            AI 어떻게 활용할 것인가? 비즈니스 적용 사례 살펴보기</a><span>2024-03-08 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="28_도넛_파이_차트/28-2_D1225.png" target="_blank"><img loading="lazy"
+                            src="28_도넛_파이_차트/28-2_D1225.png" alt="도넛·파이 차트"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2406/" target="_blank" rel="noopener">보고서
+                            똑똑하게 쓰는 방법! 생성형AI 기반 보고서 자동생성 솔루션 tok.ai</a><span>2024-02-05 · 1200×650</span></figcaption>
+                </figure>
+                <figure><a href="28_도넛_파이_차트/28-3_D1215.png" target="_blank"><img loading="lazy"
+                            src="28_도넛_파이_차트/28-3_D1215.png" alt="도넛·파이 차트"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2384/" target="_blank"
+                            rel="noopener">여행업계의 위기를 극복할 초개인화 마케팅, 생성형AI로 시작하세요!</a><span>2024-01-11 · 1200×650</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>29</b> 시장 전망 (성장)</h3>
+            <p>전/후 2개 막대 + 상승 화살표 + CAGR</p>
+            <div class="grid">
+                <figure><a href="29_시장_전망_성장/29-1_U0014.png" target="_blank"><img loading="lazy"
+                            src="29_시장_전망_성장/29-1_U0014.png" alt="시장 전망 (성장)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3624/" target="_blank" rel="noopener">2026
+                            에이전트 AI 트렌드: 생성형 AI 이후, 에이전틱 AI가 기업 업무를 바꾸는 방식</a><span>2026-01-14 · 1201×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="29_시장_전망_성장/29-2_D1004.png" target="_blank"><img loading="lazy"
+                            src="29_시장_전망_성장/29-2_D1004.png" alt="시장 전망 (성장)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/138/" target="_blank" rel="noopener">생성형
+                            AI부터 디지털 트윈까지, 성공적인 DT를 위해 알아야 할 4가지 IT 트렌드와 DT 키워드</a><span>2023-08-07 · 1200×900</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="29_시장_전망_성장/29-3_U1229.png" target="_blank"><img loading="lazy"
+                            src="29_시장_전망_성장/29-3_U1229.png" alt="시장 전망 (성장)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3094/" target="_blank" rel="noopener">AI
+                            업계가 주목하는 AI 에이전트(AI Agent), 활용 사례와 향후 전망은?</a><span>2025-01-21 · 1200×650</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>30</b> 타임라인</h3>
+            <p>연도/기간 축 + 시기별 내용</p>
+            <div class="grid">
+                <figure><a href="30_타임라인/30-1_D1059.png" target="_blank"><img loading="lazy"
+                            src="30_타임라인/30-1_D1059.png" alt="타임라인"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/172/" target="_blank" rel="noopener">2023
+                            AI 트렌드! 생성형 AI부터 LLMOps까지, 핵심 키워드 체크하고 비즈니스에 활용하세요</a><span>2023-10-12 · 1200×900</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="30_타임라인/30-2_U0144.png" target="_blank"><img loading="lazy"
+                            src="30_타임라인/30-2_U0144.png" alt="타임라인"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3666/" target="_blank" rel="noopener">AI
+                            기본법 톺아보기: AI 기본법 시행, 기업이 알아야 할 핵심 내용과 대응 전략</a><span>2026-03-06 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="30_타임라인/30-3_D1196.png" target="_blank"><img loading="lazy"
+                            src="30_타임라인/30-3_D1196.png" alt="타임라인"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2354/" target="_blank" rel="noopener">탄소
+                            배출 규제, 디지털 전환에서 해답을 찾다! Digital ESG 사례</a><span>2023-12-16 · 1200×900</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <h2 id="gG">사례·솔루션 소개</h2>
+        <section>
+            <h3><b>31</b> 기업 사례 (로고 + 설명)</h3>
+            <p>좌측 로고/라벨 + 우측 사례 설명 행</p>
+            <div class="grid">
+                <figure><a href="31_기업_사례_로고_설명/31-1_D0996.png" target="_blank"><img loading="lazy"
+                            src="31_기업_사례_로고_설명/31-1_D0996.png" alt="기업 사례 (로고 + 설명)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/136/" target="_blank" rel="noopener">생성형
+                            AI 시대, 비즈니스 효율을 위해 주목해야 할 로우코드(Low code)란?</a><span>2023-08-01 · 1200×900</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="31_기업_사례_로고_설명/31-2_D1070.png" target="_blank"><img loading="lazy"
+                            src="31_기업_사례_로고_설명/31-2_D1070.png" alt="기업 사례 (로고 + 설명)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/174/" target="_blank"
+                            rel="noopener">탄소국경조정제도(CBAM) 전환 기간을 눈 앞에 둔 지금, 기업이 알아야 할 4가지 이슈와 CBAM 대응
+                            사례</a><span>2023-10-15 · 940×705</span></figcaption>
+                </figure>
+                <figure><a href="31_기업_사례_로고_설명/31-3_D1128.png" target="_blank"><img loading="lazy"
+                            src="31_기업_사례_로고_설명/31-3_D1128.png" alt="기업 사례 (로고 + 설명)"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/128/" target="_blank" rel="noopener">업무
+                            협업툴 Slack(슬랙)으로 애자일한 조직을 구성하는 방법, 기업 실제 사례 | DT 체크인</a><span>2023-11-15 · 1200×900</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>34</b> 솔루션 핵심 가치</h3>
+            <p>슬로건 pill + 핵심가치 3열 박스</p>
+            <div class="grid">
+                <figure><a href="34_솔루션_핵심_가치/34-1_D1400.png" target="_blank"><img loading="lazy"
+                            src="34_솔루션_핵심_가치/34-1_D1400.png" alt="솔루션 핵심 가치"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2530/" target="_blank"
+                            rel="noopener">비즈니스의 혁신을 선도하는 SK㈜ C&amp;C의 대표 브랜드 런칭</a><span>2024-04-22 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="34_솔루션_핵심_가치/34-2_D1406.png" target="_blank"><img loading="lazy"
+                            src="34_솔루션_핵심_가치/34-2_D1406.png" alt="솔루션 핵심 가치"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2530/" target="_blank"
+                            rel="noopener">비즈니스의 혁신을 선도하는 SK㈜ C&amp;C의 대표 브랜드 런칭</a><span>2024-04-22 · 1200×650</span>
+                    </figcaption>
+                </figure>
+                <figure><a href="34_솔루션_핵심_가치/34-3_D1408.png" target="_blank"><img loading="lazy"
+                            src="34_솔루션_핵심_가치/34-3_D1408.png" alt="솔루션 핵심 가치"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/2530/" target="_blank"
+                            rel="noopener">비즈니스의 혁신을 선도하는 SK㈜ C&amp;C의 대표 브랜드 런칭</a><span>2024-04-22 · 1200×650</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>35</b> 제품 UI 목업</h3>
+            <p>실제 화면 위 강조 카드/말풍선 오버레이</p>
+            <div class="grid">
+                <figure><a href="35_제품_UI_목업/35-1_U0576.png" target="_blank"><img loading="lazy"
+                            src="35_제품_UI_목업/35-1_U0576.png" alt="제품 UI 목업"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3816/" target="_blank"
+                            rel="noopener">AXgenticWire Compliance, AI와 판례 데이터로 완성하는 표시광고 리스크 관리</a><span>2026-08-14 ·
+                            1920×1080</span></figcaption>
+                </figure>
+                <figure><a href="35_제품_UI_목업/35-2_U0651.png" target="_blank"><img loading="lazy"
+                            src="35_제품_UI_목업/35-2_U0651.png" alt="제품 UI 목업"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3834/" target="_blank"
+                            rel="noopener">AXgenticWire Talent AX, 모두의 일하는 방식을 바꾸는 AI Native HR 시스템</a><span>2026-08-21
+                            · 1672×941</span></figcaption>
+                </figure>
+                <figure><a href="35_제품_UI_목업/35-3_U0661.png" target="_blank"><img loading="lazy"
+                            src="35_제품_UI_목업/35-3_U0661.png" alt="제품 UI 목업"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3838/" target="_blank"
+                            rel="noopener">AXgenticWire Proposal, AI와 함께 완성하는 제안서 작성 혁신</a><span>2026-08-26 ·
+                            1920×1080</span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h3><b>39</b> 행사·이벤트 안내</h3>
+            <p>일시/장소 정보 블록 + 경품/세션 카드</p>
+            <div class="grid">
+                <figure><a href="39_행사_이벤트_안내/39-1_D1027.png" target="_blank"><img loading="lazy"
+                            src="39_행사_이벤트_안내/39-1_D1027.png" alt="행사·이벤트 안내"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/150/" target="_blank" rel="noopener">DT의
+                            필수품, 클라우드를 더 잘 활용하는 방법! 클라우드 모니터링 플랫폼, 데이터독(Datadog) 알아보기 | DT 체크인</a><span>2023-08-28 ·
+                            1200×900</span></figcaption>
+                </figure>
+                <figure><a href="39_행사_이벤트_안내/39-2_U0321.png" target="_blank"><img loading="lazy"
+                            src="39_행사_이벤트_안내/39-2_U0321.png" alt="행사·이벤트 안내"></a>
+                    <figcaption><a href="https://www.skax.co.kr/insight/trend/3728/" target="_blank" rel="noopener">AWS
+                            Summit Seoul 2026, SK AX와 함께 Agentic AI 전환의 현장을 만나보세요</a><span>2026-05-15 · 1200×650</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
